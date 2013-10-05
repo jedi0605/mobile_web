@@ -17,7 +17,7 @@
  body {
    background: #f9f3e9;
    color: #594846;
-   font: "Adobe Caslon Pro", Georgia, "Times New Roman", serif;
+   font:100% "Adobe Caslon Pro", Georgia, "Times New Roman", serif;
  }
  a, a:visited {
   color: #42628F;
@@ -88,7 +88,7 @@ dt {
 
 /* Structure */
 /*共用結構 */
-.header, .navigation, .footer {
+.header, .footer {
   clear: both;
 }
 .navigation {
@@ -98,43 +98,33 @@ dt {
   background:url(images/w.png) no-repeat;
   height: 200px;
 }
+.header, .navigation, .footer {
+  width: 100%;
+}
+.navigation ul li {
+  width: 33.333333%; /* 960/3 */
+}
+img, object{
+  max-width: 100%;
+}
 /* mobile */
 @media screen and (min-width:480px){
-  body, .header, .navigation, .footer {
-    width: 320px;
-  }
 
   .column {
     margin: 10px 0;
     border-bottom: 1px dashed #7b96bc
   }
-
-  .navigation ul li {
-    width: 106.6667px;
-  }
-
   #visit, #main, #points {
-    width: 320px;
+    width: 100%;
   }
 }
 /* pc */
 @media screen and (min-width: 481px) {
-  body, .header, .navigation, .footer {
-    width: 100%;
-  }
-  .header, .navigation, .footer {
-    clear: both;
-  }
 
   .column {
     margin: 10px 1.0416667% 0 0;
     /*border-bottom: 1px dashed #7b96bc*/
   }
-
-  .navigation ul li {
-    width: 33.333333%; /* 960/3 */
-  }
-
   #visit {
     width: 25%;
     float: left;
